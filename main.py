@@ -3,6 +3,9 @@ from os import path
 
 
 def get_properties():
+    """"
+    Functions that generates password
+    """
     while True:
         characters_num = input('Enter the number of characters (8 - 24): ')
         if (int(characters_num) > 7) and (int(characters_num) < 25):
@@ -15,6 +18,11 @@ def get_properties():
 
 
 def is_exist(filename):
+    """
+    checks
+    :param filename:
+    :return: <Boolean> File exists in pdw
+    """
     return path.exists(filename)
 
 
@@ -36,6 +44,10 @@ def write_file(password, username, webpage):
 
 
 def main():
+    """
+    main function
+    :return:
+    """
     print('Hello user!')
     webpage = input('Enter a webpage name: ')
     username = input('Enter your username: ')
