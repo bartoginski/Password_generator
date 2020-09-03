@@ -1,4 +1,4 @@
 # Password_generator
-Program that generates password, and saves that into .txt file.
+Program that generates passwords, and saves them into .txt file.
 
 My little project.
