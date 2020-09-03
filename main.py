@@ -3,13 +3,15 @@ from os import path
 
 
 def get_properties():
-    characters_num = input('Enter the number of characters (8 - 24): ')
-    all_strings = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*'
-    new_string = ''
+    while True:
+        characters_num = input('Enter the number of characters (8 - 24): ')
+        if (int(characters_num) > 7) and (int(characters_num) < 25):
+            break
+    all_characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*'
+    password = ''
     for i in range(int(characters_num)):
-        new_string += random.choice(all_strings)
-    print(new_string)
-    return new_string
+        password += random.choice(all_characters)
+    return password
 
 
 def is_exist(filename):
